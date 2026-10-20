@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ServeUp — Cardápio inteligente baseado no seu humor.">
+<title>ServeUp — Início</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<meta name="theme-color" content="#090909">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="ServeUP">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+</head>
+<body data-page="home">
+
+<div class="background">
+  <div class="background-glow background-glow-1"></div>
+  <div class="background-glow background-glow-2"></div>
+</div>
+
+<section class="screen active container-fluid" id="telaInicial">
+<button class="btn-top-right" id="btnAbrirLoginAdm" type="button">
+            LOGIN ADM
+        </button>
+<div class="home-container">
+<span class="home-badge">
+                CARDÁPIO INTELIGENTE
+            </span>
+<div class="home-logo">
+<img alt="ServeUp" class="img-fluid home-logo-img" src="imagens/serveup-logo.png"/>
+</div>
+<h1 class="home-title">
+                Serve<span>Up</span>
+</h1>
+<div class="home-divider">
+<span></span>
+
+                ✦
+
+                <span></span>
+</div>
+<h2 class="home-subtitle">
+                Seu momento merece<br/>
+                uma boa refeição.
+            </h2>
+<p class="home-description">
+
+                Escolha como você está se sentindo
+                e deixe o ServeUp encontrar uma
+                sugestão especial para você.
+
+            </p>
+<button class="btn-principal" id="btnIniciar" type="button">
+<span>
+                    INICIAR
+                </span>
+<strong>
+                    →
+                </strong>
+</button>
+<p class="home-footer">
+                FEITO PARA TORNAR SUA REFEIÇÃO ESPECIAL
+            </p>
+</div>
+</section>
+<script src="js/data.js" defer></script>
+<script src="js/auth.js" defer></script>
+<script src="js/recomendacoes.js" defer></script>
+<script src="js/administrador.js" defer></script>
+<script src="js/cardapio.js" defer></script>
+<script src="js/carrinho.js" defer></script>
+<script src="js/pedidos.js" defer></script>
+<script src="js/jogos.js" defer></script>
+<script src="js/app.js" defer></script>
+
+<script>
+// Registra o modo instalável do ServeUP quando hospedado em HTTPS ou localhost.
+if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1')) {
+  window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch((error) => console.warn('Não foi possível registrar o modo offline do ServeUP:', error)));
+}
+</script>
+</body>
+</html>
